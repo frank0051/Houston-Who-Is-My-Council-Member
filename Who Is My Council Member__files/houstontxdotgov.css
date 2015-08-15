@@ -1,0 +1,769 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+.content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.content a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #1D645D;
+	text-decoration: none;
+}
+.content a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #1D645D;
+		
+}
+.content a:hover {
+
+	text-decoration: underline;
+	color: #1D645D;
+
+}
+
+.homecontent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.homecontent a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #5A94F4;
+	text-decoration: none;
+}
+.homecontent a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #5A94F4;
+		
+}
+.homecontent a:hover {
+
+	text-decoration: underline;
+	color: #5A94F4;
+
+}
+
+#breadcrumbs {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	
+}
+#breadcrumbs a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #1D645D;
+	
+}
+#breadcrumbs a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #1D645D;
+		
+}
+
+#breadcrumbs a:hover {
+
+	text-decoration: underline;
+	color: #1D645D;
+
+}
+
+#linkboxes {
+	float:left;
+	width: 300px;
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:10px;
+	padding-left:5px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#1D645D;
+}
+
+.welcome {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 23pt;
+	font-weight: normal;
+	color: #1D645D;
+}
+
+.newsevent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: normal;
+	color: #1D645D;
+}
+
+
+.newstitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #1D645D;
+}
+.newssubtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #1D645D;
+}
+
+.presstitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #01733F;
+}
+.presssubtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #01733F;
+}
+
+.BoldLarge
+{
+	font-weight:bold;
+	font-size: 12pt;	
+	color: #000000;
+}
+
+.redBold
+{
+	font-weight:bold;
+	font-size: 10pt;	
+	color: #FF0000;
+}
+
+.contBold
+{
+	font-weight:bold;
+}
+
+
+.contBold a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #1D645D;
+	text-decoration: none;
+}
+.contBold a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #1D645D;
+		
+}
+.contBold a:hover {
+
+	text-decoration: underline;
+	color: #1D645D;
+
+}
+
+
+.contBoldItalic
+{
+	font-weight:bold;
+	font-style: italic;
+}
+
+.contItalic {
+	font-style: italic;
+}
+
+.contItalic a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #1D645D;
+	text-decoration: none;
+}
+.contItalic a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #1D645D;
+		
+}
+.contItalic a:hover {
+
+	text-decoration: underline;
+	color: #1D645D;
+
+}
+
+
+
+
+
+.bullets
+{
+
+	list-style-type:disc;
+	list-style-position:outside;
+	padding-left:5px;
+	padding-bottom:5px;
+	padding-top:5px;
+	margin-left:20px;
+	text-align:left;
+	
+
+}
+.bullets a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #1D645D;
+	text-decoration: none;
+}
+.bullets a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #1D645D;
+		
+}
+.bullets a:hover {
+
+	text-decoration: underline;
+	color: #1D645D;
+
+}
+
+
+.homebullets
+{
+
+	list-style-type:disc;
+	list-style-position:outside;
+	padding-left:5px;
+	padding-bottom:5px;
+	padding-top:5px;
+	margin-left:20px;
+	text-align:left;
+	
+
+}
+.homebullets a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #5A94F4;
+	text-decoration: none;
+}
+.homebullets a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #5A94F4;
+		
+}
+.homebullets a:hover {
+
+	text-decoration: underline;
+	color: #5A94F4;
+
+}
+
+
+.graphicsbox
+{
+	padding:10px;	
+	margin-right:5px;
+	margin-top:5px;
+	margin-bottom:5px;
+	text-align:center;
+	float:left;
+	
+}
+
+.graphicsbox img
+{
+	border-width:2px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:5px;
+	
+	
+}
+
+.table
+{
+	padding:10px;	
+	margin-right:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align:center;
+	float:left;
+}
+
+.table img
+{
+	border-width:3px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:20px;
+	
+	
+}
+
+.table250
+{
+	padding:10px;	
+	margin-right:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align:left;
+	float:left;
+	width:250px;
+}
+
+.table250 img
+{
+	border-width:3px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:20px;
+	
+	
+}
+
+.table150
+{
+	padding:10px;	
+	margin-right:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align:center;
+	float:left;
+	width:150px;
+}
+
+.table150 img
+{
+	border-width:3px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:10px;
+	
+	
+}
+
+.table125
+{
+	padding:10px;	
+	margin-right:15px;
+	margin-top:10px;
+	margin-bottom:10px;
+	float:left;
+	width:125px;
+}
+
+.table125 img
+{
+	border-width:3px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:10px;
+	
+	
+}
+
+.tablerightjustleft
+{
+	padding:10px;	
+	margin-right:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align:left;
+	float:right;
+}
+
+.tablerightjustleft img
+{
+	border-width:2px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:20px;
+	
+	
+}
+
+
+
+.captionplain {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #1D645D;
+	
+}
+
+.captionplain a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #1D645D;
+	text-decoration: underline;
+}
+.captionplain a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	color: #1D645D;
+		
+}
+
+.galleryctr
+{
+	padding:10px;	
+	margin-right:5px;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align:left;
+	float:left;
+	width:210px;
+}
+
+.galleryctr img
+{
+	border-width:2px;
+	border-style:solid;
+	border-color:#1D645D;
+	margin-bottom:10px;
+	
+	
+}
+
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: italic;
+	color: #1D645D;
+	
+}
+
+.caption a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: italic;
+	color: #1D645D;
+	text-decoration: underline;
+}
+.caption a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: italic;
+	color: #1D645D;
+		
+}
+
+.homeimagegraytwo
+{
+	border-width:2px;
+	border-style:solid;
+	border-color:#F7F7F7;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-left:10px;
+	margin-top:10px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	padding-top:5px;
+	
+	
+}
+
+.homeimagegraytworight
+{
+	border-width:2px;
+	border-style:solid;
+	border-color:#F7F7F7;
+	margin-bottom:10px;
+	margin-right:2px;
+	margin-left:10px;
+	margin-top:10px;
+	padding-left:5px;
+	padding-right:2px;
+	padding-bottom:5px;
+	padding-top:5px;
+	
+	
+}
+
+.homeimagegraytwoleft
+{
+	border-width:2px;
+	border-style:solid;
+	border-color:#F7F7F7;
+	margin-bottom:10px;
+	margin-right:10px;
+	margin-left:2px;
+	margin-top:10px;
+	padding-left:2px;
+	padding-right:5px;
+	padding-bottom:5px;
+	padding-top:5px;
+	
+	
+}
+
+
+/* Content Box. Text surrounded by a box. Green border, light grey backgound.  */
+/* Example: */
+/*<div class="contentBoxTitle">Title Goes Here</div> */
+/*<div class="contentBox">Content Goes Here</div> */
+
+.contentBoxTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	margin: 10px;
+	margin-bottom: 0px;
+	padding: 2px 5px;
+	font-size: 11pt;
+	border: thin solid #194687;
+	background-image: url(../images/titleBG.jpg);
+	background-repeat: repeat-x;
+	background-color: #56A294;
+	color: #FFF;	
+}
+.contentBoxTitle h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+	padding: 0px;
+	color: #FFF;
+}
+
+.contentBox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	display: block;
+	margin: 10px;
+	margin-top: 0px;
+	padding: 5px;
+	border: thin solid #55A193;
+	border-top: none;
+	background-color: #DDD;
+}
+
+
+
+
+
+
+
+/* Green Content Box . Text surrounded by a box. Green border, white backgound.  */
+/* Example: */
+/*<div class="contentBoxTitle">Title Goes Here</div> */
+/*<div class="contentBox">Content Goes Here</div> */
+
+.contentBoxGreenTitle p{
+	font-family: Arial, Helvetica, sans-serif;
+	display: block;
+	margin-bottom: 0px;
+	padding: 2px 10px;
+	border: thin solid #1D645D;
+	background-color: #1D645D;
+	color: #FFF;		
+	padding-left: 10px;
+	font-size: 18px;	
+	line-height: 40px;
+  text-transform:uppercase;
+}
+
+
+.contentGreenBox {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	display: block;
+	margin-top: 0px;
+	padding: 5px;
+	border: thin solid #1D645D;
+	border-top: none;
+	background-color: #FFF;
+}
+
+
+/*image css when floating left and right */
+.imgFltLft {
+	float: left;
+	padding: 0px 10px 10px 0px;
+}
+.imgFltRgt {
+	float: right;
+	padding: 0px 10px 10px 10px;
+}
+
+
+
+/*copyright */
+
+.copyright {
+	text-align: center;
+	color: #000000;
+}
+
+.copyright a {
+	color: #000000;
+	text-decoration: none;
+}
+.copyright a:hover {
+	color: #000000;
+	text-decoration: underline;	
+}
+
+
+/* links title inside deptLinks (to the right of deptContent) */
+
+.IntRightLinks p {
+		margin-top: 10px;	
+		margin-bottom: 3px;
+    padding-left: 10px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: normal; 
+    line-height: 50px; 
+    color: #FFFFFF;      
+    font-size: 18px;
+    text-transform:uppercase; 
+    background-color: #1D645D;
+}
+
+/*deptLinks hyperlink CSS */
+.IntRightLinks ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.IntRightLinks li { 
+margin: 0 0 .2em 0; 
+}
+
+.IntRightLinks a {
+display: block;
+color: #1D645D;
+background-color: #EEE;
+width: 94%;
+padding: .2em .8em;
+text-decoration: none;
+}
+
+.IntRightLinks a:hover
+{
+background-color: #1D645D;
+color: #FFF;
+}
+
+#active a
+{
+display: block;
+color: #1D645D;
+background-color: #BCCFEB;
+width: 94%;
+padding: .2em .8em;
+text-decoration: none;
+}
+
+/* end of deptLinks CSS */
+
+
+
+
+.IntRightSubLinks p {
+		margin-top: 10px;	
+		margin-bottom: 3px;
+    padding-left: 10px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: normal; 
+    line-height: 50px; 
+    color: #FFFFFF;      
+    font-size: 18px;
+    text-transform:uppercase; 
+    background-color: #55A193;
+}
+
+
+.IntRightSubLinks ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.IntRightSubLinks li { 
+margin: 0 0 .2em 0; 
+}
+
+.IntRightSubLinks a {
+display: block;
+color: #55A193;
+background-color: #EEE;
+width: 94%;
+padding: .2em .8em;
+text-decoration: none;
+}
+
+.IntRightSubLinks a:hover
+{
+background-color: #55A193;
+color: #FFF;
+}
+
+#active a {
+display: block;
+color: #1D645D;
+background-color: #BCCFEB;
+width: 94%;
+padding: .2em .8em;
+text-decoration: none;
+}
+
+
+/* Department name  */
+
+.deptTitle
+{
+    margin-top: 10px;	
+    padding-left: 10px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: normal; 
+    line-height: 50px; 
+    color: #1D645D;      
+    font-size: 18px; 
+    text-transform:uppercase; 
+    background-color: #BCCFEB;
+}
+
+
+.pageTitle
+{
+    margin-top: 10px;	
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: normal; 
+    color: #1D645D;      
+    font-size: 17px; 
+    text-transform: capitalize; 
+}

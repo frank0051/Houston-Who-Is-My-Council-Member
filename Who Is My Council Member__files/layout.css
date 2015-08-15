@@ -1,0 +1,509 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidPadded {
+	clear: both;
+	margin-left: 0;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 98%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {	
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+
+#navBar {
+	border-top: 3px solid #55A193;
+}
+#citySeal {
+width: 100%;
+}
+#nav {
+margin-left: 0;
+clear: both;
+width: 100%;
+}
+
+/* nav css */
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+text-decoration: none;
+}
+
+#nav ul li {
+  width: 100%;
+  display: block;	
+	padding: 7px 15px;
+}
+#nav ul li:hover {
+	background-color: #ebebeb;
+}
+#nav ul ul li:hover {
+	background-color: #9f9f9f;
+}
+#nav li a {
+	color: #56a294;
+	font-weight: bold;
+	text-decoration: none;
+}
+#nav li a:hover {
+	color: #56A294;
+	text-decoration: none;
+}
+
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#nav.opened {
+  max-height: 9999px;
+}
+
+/*end nav css */
+
+
+
+#searchBar {
+	clear: both;
+	line-height: 40px;
+	text-align: center;
+	background-color: #56a294;
+	border-bottom: 3px solid #1D645D;
+}
+
+#breadcrumbs {
+	font-size: 10pt;
+	line-height: 30px;
+}
+#breadcrumbs a {
+	color: #1D645D;
+	text-decoration: none;
+}
+#breadcrumbs a:visited {
+	color: #1D645D;
+	text-decoration: none;
+}
+#breadcrumbs a:hover {
+	color: #56A294;
+	text-decoration: none;
+}
+
+#topContent {
+}
+#mainContent {
+}
+#deptContent {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#deptLinks {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+
+#midPageContent {
+}
+#twoColLeft {
+width: 100%;
+}
+#twoColRight {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#middleContent {
+}
+#callToAction {
+	background-color: #C2C2C2;
+}
+#threeColLeft {
+width: 100%;
+}
+#threeColMiddle {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#threeColRight {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#threeColLeft25 {
+width: 100%;
+}
+#threeColMiddle50 {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#threeColRight25 {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#oneColFullWidth {
+	padding: 20px 0px;
+}
+#bottomContent {	
+	padding: 20px 0px;
+}
+#footer {
+		line-height: 30px;
+		background-color: #1D645D;
+		text-align: center;
+}
+
+/* footer links css */
+#footer a {
+	padding:2px 10px;
+	text-align:center;
+	text-decoration: none;
+	color:#FFF;
+}
+#footer a:visited {
+	text-decoration: none;
+	color:#FFF;
+}
+#footer a:hover {
+	text-decoration: underline;
+	color:#FFF;
+}
+#footer a:active {
+	text-decoration: none;
+	color:#FFF;
+}
+
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+#navBar {
+}
+#citySeal {
+width: 100%;
+}
+#nav {
+clear: both;
+margin-left: 0;
+width: 100%;
+}
+
+/*nav css */
+.js #nav {
+	position: relative;
+	overflow: visible;
+}
+.js #nav.closed {
+	max-height: none;
+}
+#nav-toggle {
+	display: none;
+}
+
+#nav ul li {
+	float: left;
+	list-style: none;
+	width: auto;
+	padding: 0px;
+}
+
+#nav ul li a {
+	padding: 7px 15px;
+	display: block;
+	color: #56A294;
+}
+#nav ul li a:hover {
+	color: #707070;
+}
+
+#nav ul li:hover {
+	background-color: #ebebeb;
+}
+
+#nav ul ul {
+	position: absolute;
+	left: -999em;
+}
+
+#nav ul li:hover ul {
+	left: auto;
+	width: auto;
+}
+
+#nav ul li ul li {
+	float: none;
+	background-color: #ebebeb;
+	padding: 0px 15px;
+}
+
+/*end nav css */
+
+
+#searchBar {
+	clear: both;
+	line-height: 60px;
+	text-align: center;
+	background-color: #56a294;
+}
+#breadcrumbs {
+}
+#topContent {
+}
+#mainContent {
+}
+#deptContent {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#deptLinks {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#midPageContent {
+}
+#twoColLeft {
+width: 100%;
+}
+#twoColRight {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#middleContent {
+}
+#callToAction {
+}
+#threeColLeft {
+width: 100%;
+}
+#threeColMiddle {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#threeColRight {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#threeColLeft25 {
+width: 100%;
+}
+#threeColMiddle50 {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#threeColRight25 {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#oneColFullWidth {
+}
+#bottomContent {
+}
+#footer {
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#navBar {
+}
+#citySeal {
+width: 23.7288%;
+}
+#nav {
+clear: none;
+margin-left: 1.6949%;
+width: 74.5762%;
+padding-top: 25px;
+}
+#searchBar {
+	clear: both;
+	width: 100%;
+	height: 250px;
+	display: block;
+	text-align: right; 
+	background-image: url(../images/downtown1300x250.jpg);
+	background-repeat: no-repeat;
+	background-position:center;
+	border-bottom: 7px solid #1D645D;
+}
+#breadcrumbs {
+}
+#topContent {
+}
+#mainContent {
+}
+#deptContent {
+width: 66.1016%;
+clear: both;
+margin-left: 0;
+}
+#deptLinks {
+width: 32.2033%;
+clear: none;
+margin-left: 1.6949%;
+}
+#midPageContent {
+}
+#twoColLeft {
+width: 49.1525%;
+}
+#twoColRight {
+width: 49.1525%;
+clear: none;
+margin-left: 1.6949%;
+}
+#middleContent {
+}
+#callToAction {
+}
+#threeColLeft {
+width: 32.2033%;
+}
+#threeColMiddle {
+width: 32.2033%;
+clear: none;
+margin-left: 1.6949%;
+}
+#threeColRight {
+width: 32.2033%;
+clear: none;
+margin-left: 1.6949%;
+}
+#threeColLeft25 {
+width: 23.7288%;
+}
+#threeColMiddle50 {
+width: 49.1525%;
+clear: none;
+margin-left: 1.6949%;
+}
+#threeColRight25 {
+width: 23.7288%;
+clear: none;
+margin-left: 1.6949%;
+}
+#oneColFullWidth {
+}
+#bottomContent {
+}
+#footer {
+	text-align: left;
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}
+
+/* CoH Specific CSS */
+
