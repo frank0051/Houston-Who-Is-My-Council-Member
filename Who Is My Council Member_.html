@@ -130,7 +130,7 @@
 			
 			<!--Changes for Who is My CM? -->
 			<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
-
+			<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 			<script type="text/javascript">
 				function initialize() {
 				  var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -208,13 +208,23 @@
 					url +=lng+"%2C%22y%22%3A"+lat+"%2CspatialReference%3A+%7B+wkid%3A+4326+%7D%7D&geometryType=esriGeometryPoint&spatialRel=esriSpatialRelIntersects&outFields=DISTRICT%2CMEMBER%2CPHONE%2CYEAR&returnGeometry=false&returnDistinctValues=false&f=json";
 					
 					xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							var myArr = JSON.parse(xmlhttp.responseText);
-							var features = myArr['features'][0];
-							var district = features['attributes']['DISTRICT'];
-							var councilMember = features['attributes']['MEMBER'];
-							var councilPhone = features['attributes']['PHONE'];
-							var yearElect = features['attributes']['YEAR'];
+						try{
+							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+								var myArr = JSON.parse(xmlhttp.responseText);
+								var features = myArr['features'][0];
+								var district = features['attributes']['DISTRICT'];
+								var councilMember = features['attributes']['MEMBER'];
+								var councilPhone = features['attributes']['PHONE'];
+								var yearElect = features['attributes']['YEAR'];
+								
+								var text = "<a href=\"//www.houstontx.gov/council/District/"+district.toLowerCase()+"\"> District "+district+"</a> - "+councilMember+" - "+councilPhone+" - First Elected In "+yearElect;
+								
+								$('#councilMembers').html(text);
+								
+							}
+						}
+						catch(err){
+							$('#councilMembers').html("Sorry, the site is either having problems or you don't live in the City of Houston");
 						}
 					}
 					xmlhttp.open("GET",url,false);
@@ -225,8 +235,13 @@
 				google.maps.event.addDomListener(window, 'load', initialize); 
 			</script>
 			
-			
+			Just enter your property address to find your council district and hit enter.
 				<input id="searchTextField" type="text" size="50" placeholder="Enter your address and hit enter" autocomplete="on" />  
+				
+			<div class="GroupHeader">
+				<a href="//www.houstontx.gov/council/">City Council</a>
+			</div>
+			<div class="ResultItemWrapper" id="councilMembers"> </div>
 
 				<div id="map-canvas" style="height: 450px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
 				
