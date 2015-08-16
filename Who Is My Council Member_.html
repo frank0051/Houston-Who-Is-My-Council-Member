@@ -131,7 +131,7 @@
 			<!--Changes for Who is My CM? -->
 			<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
 			<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-			<script type="text/javascript">
+			<script type="text/javascript">		
 				function initialize() {
 				  var map = new google.maps.Map(document.getElementById('map-canvas'), {
 					center: {lat: 29.7467, lng: -95.3819},
@@ -195,7 +195,7 @@
 					//End Autocomplete listener and zoom
 				}
 				
-				function getCouncilDistrict(lat,lng){
+				function getCouncilDistrict(lat,lng){				
 					if (window.XMLHttpRequest)
 					  {// code for IE7+, Firefox, Chrome, Opera, Safari
 					  xmlhttp=new XMLHttpRequest();
@@ -217,7 +217,23 @@
 								var councilPhone = features['attributes']['PHONE'];
 								var yearElect = features['attributes']['YEAR'];
 								
+								//Define at-Large
+								var atLarge = [
+									{"DISTRICT":"1", "MEMBER":"STEPHEN COSTELLO", "PHONE":"832.393.3014","YEAR":"2009"},
+									{"DISTRICT":"2", "MEMBER":"DAVID ROBINSON", "PHONE":"832.393.3013","YEAR":"2013"},
+									{"DISTRICT":"3", "MEMBER":"MICHAEL KUBOSH", "PHONE":"832.393.3005","YEAR":"2013"},
+									{"DISTRICT":"4", "MEMBER":"C.O. \"BRAD\" BRADFORD", "PHONE":"832.393.3012","YEAR":"2009"},
+									{"DISTRICT":"5", "MEMBER":"JACK CHRISTIE", "PHONE":"832.393.3017","YEAR":"2011"}
+								];
+								//End Define at-Large
+								
 								var text = "<a href=\"//www.houstontx.gov/council/"+district.toLowerCase()+"\"> District "+district+"</a> - "+councilMember+" - "+councilPhone+" - First Elected In "+yearElect;
+								
+								//PARSE AT-LARGE
+								var i;
+								for(i = 0; i < atLarge.length; i++) {
+									text += "<br><a href=\"//www.houstontx.gov/council/"+atLarge[i]['DISTRICT']+"\"> At-Large Position "+atLarge[i]['DISTRICT']+"</a> - "+atLarge[i]['MEMBER']+" - "+atLarge[i]['PHONE'] + " - First Elected In "+atLarge[i]['YEAR'];
+								}
 								
 								$('#councilMembers').html(text);
 								
