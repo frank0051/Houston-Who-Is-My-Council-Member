@@ -129,8 +129,28 @@
             <h3 class="pageTitle">Who Is My Council Member? </h3>
 			
 			<!--Changes for Who is My CM? -->
+			<style type="text/css">
+				.ResultsGroupHeader
+				{
+					font-size: 17px;
+					border-bottom-style: solid;
+					border-bottom-width: 1px;
+					/*border-bottom: solid 1px #000;*/
+					display: block;
+					margin-top: 20px;
+					margin-bottom:10px;
+					text-align: left;
+					color: #1D645D;
+				}
+				
+				.ResultItemWrapper
+				{
+					margin-bottom: 10px;
+				}
+			</style>
+			
 			<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
-			<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+			<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
 			<script type="text/javascript">		
 				function initialize() {
 				  var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -195,7 +215,8 @@
 					//End Autocomplete listener and zoom
 				}
 				
-				function getCouncilDistrict(lat,lng){				
+				function getCouncilDistrict(lat,lng){	
+					var xmlhttp;
 					if (window.XMLHttpRequest)
 					  {// code for IE7+, Firefox, Chrome, Opera, Safari
 					  xmlhttp=new XMLHttpRequest();
@@ -227,12 +248,12 @@
 								];
 								//End Define at-Large
 								
-								var text = "<a href=\"//www.houstontx.gov/council/"+district.toLowerCase()+"\"> District "+district+"</a> - "+councilMember+" - "+councilPhone+" - First Elected In "+yearElect;
+								var text = "<a href=\"//www.houstontx.gov/council/"+district.toLowerCase()+"\"> District "+district+"</a> - "+councilMember+" \n<ul style=\"margin:5px 0\"><li> First Elected In: "+yearElect+"<li>Phone: "+councilPhone+"</ul>";
 								
 								//PARSE AT-LARGE
 								var i;
 								for(i = 0; i < atLarge.length; i++) {
-									text += "<br><a href=\"//www.houstontx.gov/council/"+atLarge[i]['DISTRICT']+"\"> At-Large Position "+atLarge[i]['DISTRICT']+"</a> - "+atLarge[i]['MEMBER']+" - "+atLarge[i]['PHONE'] + " - First Elected In "+atLarge[i]['YEAR'];
+									text += "<a href=\"//www.houstontx.gov/council/"+atLarge[i]['DISTRICT']+"\"> At-Large Position "+atLarge[i]['DISTRICT']+"</a> - "+atLarge[i]['MEMBER']+" \n<ul style=\"margin:5px 0\"> <li>First Elected In: "+atLarge[i]['YEAR']+"<li>Phone: "+atLarge[i]['PHONE'] + "</ul>";
 								}
 								
 								$('#councilMembers').html(text);
@@ -251,17 +272,22 @@
 				google.maps.event.addDomListener(window, 'load', initialize); 
 			</script>
 			
-			Just enter your property address to find your council district and hit enter.
+			Enter your property address to find your council district and hit enter.
 				<input id="searchTextField" type="text" size="50" placeholder="Enter your address and hit enter" autocomplete="on" />  
 				
-			<div class="GroupHeader">
-				<a href="//www.houstontx.gov/council/">City Council</a>
+			<div class="ResultsGroupHeader">
+				<a href="//www.houstontx.gov/council/" style="font-size:17px; font-weight: normal; color: #1D645D;">City Council</a>
 			</div>
-			<div class="ResultItemWrapper" id="councilMembers"> </div>
+			<div class="ResultItemWrapper" id="councilMembers"> Enter your property address above to find your council district and hit enter.</div>
 
-				<div id="map-canvas" style="height: 450px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
-				
-				</div>
+			<div id="map-canvas" style="height: 400px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
+			
+			</div>
+			
+			<div class="ResultsGroupHeader">
+				Looking For More Information?
+			</div>
+			
 			<!--End Changes -->
                               
                                                     <p align="center"><img src="./Who Is My Council Member__files/mycity2015.jpg" alt="MyCity Logo" width="150" height="76" class="homeimagegraytworight" align="right"></p>
