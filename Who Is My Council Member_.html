@@ -216,7 +216,7 @@
 				}
 				
 				function getCouncilDistrict(lat,lng){	
-					var xmlhttp;
+					/*var xmlhttp;
 					if (window.XMLHttpRequest)
 					  {// code for IE7+, Firefox, Chrome, Opera, Safari
 					  xmlhttp=new XMLHttpRequest();
@@ -225,31 +225,32 @@
 					  {// code for IE6, IE5
 					  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 					  }
-					var url="http://crossorigin.me/http://mycity.houstontx.gov/arcgis1022/rest/services/IT/cohgis_feature_services_wm/FeatureServer/16/query?geometry=%7B%22x%22%3A";
+					 */
+					var url="http://mycity.houstontx.gov/arcgis1022/rest/services/IT/cohgis_feature_services_wm/FeatureServer/16/query?geometry=%7B%22x%22%3A";
 					url +=lng+"%2C%22y%22%3A"+lat+"%2CspatialReference%3A+%7B+wkid%3A+4326+%7D%7D&geometryType=esriGeometryPoint&spatialRel=esriSpatialRelIntersects&outFields=DISTRICT%2CMEMBER%2CPHONE%2CYEAR&returnGeometry=false&returnDistinctValues=false&f=json";
 					
-					xmlhttp.onreadystatechange = function() {
-						try{
-							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-								var myArr = JSON.parse(xmlhttp.responseText);
-								var features = myArr['features'][0];
+					$.ajax({
+						 url: url,
+						 dataType: 'jsonp', // Notice! JSONP <-- P (lowercase)
+						 success:function(data){
+							try{
+								var features = data['features'][0];
 								var district = features['attributes']['DISTRICT'];
 								var councilMember = features['attributes']['MEMBER'];
 								var councilPhone = features['attributes']['PHONE'];
 								var yearElect = features['attributes']['YEAR'];
 								
-								//Define at-Large
-								var atLarge = [
-									{"DISTRICT":"1", "MEMBER":"STEPHEN COSTELLO", "PHONE":"832.393.3014","YEAR":"2009"},
-									{"DISTRICT":"2", "MEMBER":"DAVID ROBINSON", "PHONE":"832.393.3013","YEAR":"2013"},
-									{"DISTRICT":"3", "MEMBER":"MICHAEL KUBOSH", "PHONE":"832.393.3005","YEAR":"2013"},
-									{"DISTRICT":"4", "MEMBER":"C.O. \"BRAD\" BRADFORD", "PHONE":"832.393.3012","YEAR":"2009"},
-									{"DISTRICT":"5", "MEMBER":"JACK CHRISTIE", "PHONE":"832.393.3017","YEAR":"2011"}
-								];
-								//End Define at-Large
-								
 								var text = "<a href=\"//www.houstontx.gov/council/"+district.toLowerCase()+"\"> District "+district+"</a> - "+councilMember+" \n<ul style=\"margin:5px 0\"><li> First Elected In: "+yearElect+"<li>Phone: "+councilPhone+"</ul>";
-								
+
+								 //Define at-Large
+									var atLarge = [
+										{"DISTRICT":"1", "MEMBER":"STEPHEN COSTELLO", "PHONE":"832.393.3014","YEAR":"2009"},
+										{"DISTRICT":"2", "MEMBER":"DAVID ROBINSON", "PHONE":"832.393.3013","YEAR":"2013"},
+										{"DISTRICT":"3", "MEMBER":"MICHAEL KUBOSH", "PHONE":"832.393.3005","YEAR":"2013"},
+										{"DISTRICT":"4", "MEMBER":"C.O. \"BRAD\" BRADFORD", "PHONE":"832.393.3012","YEAR":"2009"},
+										{"DISTRICT":"5", "MEMBER":"JACK CHRISTIE", "PHONE":"832.393.3017","YEAR":"2011"}
+									];
+									
 								//PARSE AT-LARGE
 								var i;
 								for(i = 0; i < atLarge.length; i++) {
@@ -257,16 +258,16 @@
 								}
 								
 								$('#councilMembers').html(text);
-								
+							}	
+							catch(err){
+								$('#councilMembers').html("Sorry, the site is either having problems or you don't live in the City of Houston.");
 							}
-						}
-						catch(err){
-							$('#councilMembers').html("Sorry, the site is either having problems or you don't live in the City of Houston");
-						}
-					}
-					xmlhttp.open("GET",url,false);
-					xmlhttp.send();
-					
+								
+						 },
+						 error:function(){
+							 $('#councilMembers').html("Sorry, the site is either having problems or you don't live in the City of Houston.");
+						 }      
+					});
 				}
 				
 				google.maps.event.addDomListener(window, 'load', initialize); 
